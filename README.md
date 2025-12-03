@@ -1,36 +1,124 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 倉頡練習 Cangjie Practice
 
-## Getting Started
+A modern web application for learning and practicing the Cangjie (倉頡) Chinese input method. Practice typing real Chinese words and get immediate feedback on your accuracy.
 
-First, run the development server:
+## Features
+
+- 📚 **Real Chinese Words**: Practice with over 16,000 common Chinese words
+- ⌨️ **Visual Key Mapping**: Shows the keyboard layout for Cangjie codes
+
+## How to Use
+
+### Installation
+
+1. Clone the repository:
+
+```bash
+git clone https://github.com/alex-lee-998/canjie.git
+cd canjie
+```
+
+2. Install dependencies:
+
+```bash
+npm install
+```
+
+3. Run the development server:
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+4. Open [http://localhost:3000](http://localhost:3000) in your browser
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### Using the App
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+#### Basic Workflow
+
+1. **View the Word**: At the top, you'll see a Chinese word with the current character highlighted in blue
+2. **See the Target Character**: The large character in the center is what you're currently typing
+3. **Type the Cangjie Code**: Below the character, you'll see the Cangjie code represented by keyboard keys
+4. **Get Feedback**: As you type:
+   - ✅ **Green** = Correct key
+   - ❌ **Red** = Wrong key (triggers shake animation)
+5. **Progress Through**:
+   - Complete one character → automatically moves to the next character in the word
+   - Complete the word → automatically gets a new random word
+
+#### Keyboard Controls
+
+- **Letter keys (a-z)**: Type the Cangjie code for the current character
+- **Backspace**: Delete the last typed character (required to fix mistakes)
+- **Enter**: Skip to a new random word
+
+#### Important Rules
+
+⚠️ **You cannot continue typing if you make a mistake!**
+
+- When you type a wrong key, the code display will shake
+- You must press **Backspace** to remove the wrong character
+- Only then can you continue typing the correct sequence
+
+This enforces proper learning and prevents developing bad typing habits.
+
+### Example Practice Session
+
+```
+Word: 你好
+Current Character: 你
+Cangjie Code: ofd
+
+1. Type 'o' → Shows green
+2. Type 'f' → Shows green
+3. Type 'd' → Shows green
+4. ✓ Character complete! → Moves to 好
+5. Continue with next character...
+```
+
+If you make a mistake:
+
+```
+Current Character: 你
+Cangjie Code: ofd
+
+1. Type 'o' → Shows green
+2. Type 'x' → Shows red + SHAKE! ❌
+3. Must press Backspace to continue
+4. Type 'f' → Shows green
+5. Continue...
+```
 
 ## Learn More
 
-To learn more about Next.js, take a look at the following resources:
+### About Cangjie Input Method
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Cangjie (倉頡) is a character input method for Chinese text that uses a set of 24 keys representing different radicals and shapes. It's widely used in Hong Kong and Taiwan.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+### Resources
 
-## Deploy on Vercel
+- [Cangjie Input Method - Wikipedia](https://en.wikipedia.org/wiki/Cangjie_input_method)
+- [Next.js Documentation](https://nextjs.org/docs)
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Contributing
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Contributions are welcome! Feel free to:
+
+- Report bugs
+- Suggest new features
+- Submit pull requests
+- Improve documentation
+
+## License
+
+This project is open source and available under the MIT License.
+
+## Acknowledgments
+
+- Character database sourced from common Chinese word lists
+- Built with Next.js and modern web technologies
+- Inspired by traditional Cangjie typing tutors
+
+---
+
+**Happy Typing! 加油！** 🎉
