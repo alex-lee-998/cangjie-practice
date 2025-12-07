@@ -2,6 +2,10 @@
 
 A modern web application for learning and practicing the Cangjie (倉頡) Chinese input method. Practice typing real Chinese words and get immediate feedback on your accuracy.
 
+## Try it out
+
+🚀 **[https://alex-lee-998.github.io/cangjie-practice/](https://alex-lee-998.github.io/cangjie-practice/)**
+
 ## Features
 
 - 📚 **Real Chinese Words**: Practice with over 16,000 common Chinese words
