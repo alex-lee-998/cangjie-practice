@@ -10,4 +10,4 @@ const nextConfig: NextConfig = {
   assetPrefix: repoPath,
 };
 
-export default nextConfig;
+module.exports = nextConfig
